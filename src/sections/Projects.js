@@ -30,85 +30,25 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" style={{ padding: "5% 10%" }}>
-      <div
-        style={{
-          fontWeight: "bold",
-          fontSize: "3vw",
-          marginBottom: "10%",
-          color: "#D672B4",
-        }}
-      >
-        Projects
-      </div>
+    <div id="projects" className="projects-container">
+      <div className="projects-header">Projects</div>
 
       {projects.map((project, index) => {
         return (
-          <div
-            style={{
-              display: "flex",
-              marginBottom: "20%",
-            }}
-          >
-            <div>
-              <img
-                src={`${process.env.PUBLIC_URL}/images/${project.image}.png`}
-                style={{
-                  height: "30vw",
-                  display: "flex",
-                  float: index % 2 === 0 ? "left" : "right",
-                  width: "50%",
-                }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  float: index % 2 === 0 ? "left" : "right",
-                  padding: "0 40px",
-                  boxSizing: "border-box",
-                  width: "50%",
-                  height: "100%",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontWeight: "bold",
-                    color: "#93da9e",
-                    fontSize: "1.5vw",
-                    marginBottom: "10px",
-                  }}
-                >
-                  {project.name}
-                </div>
-                <p style={{ lineHeight: "2", color: "#CED8F8" }}>
-                  {project.desc}
-                </p>
-                <div
-                  style={{
-                    display: "flex",
-                  }}
-                >
-                  {project.stack.map((stack) => {
-                    return (
-                      <div
-                        style={{
-                          color: "#93da9e",
-                          borderRadius: "5px",
-                          backgroundColor: "transparent",
-                          border: "2px solid #93da9e",
-                          padding: "0.3vw 1vw",
-                          marginRight: "1vw",
-                          marginTop: "0.5vw",
-                          fontSize: "1vw",
-                        }}
-                      >
-                        {stack}
-                      </div>
-                    );
-                  })}
-                </div>
+          <div className="project-item" key={index}>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/${project.image}.png`}
+              className="project-image"
+            />
+            <div className="project-details">
+              <div className="project-name">{project.name}</div>
+              <p className="project-description">{project.desc}</p>
+              <div className="project-stack">
+                {project.stack.map((stack, stackIndex) => (
+                  <div className="stack-item" key={stackIndex}>
+                    {stack}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

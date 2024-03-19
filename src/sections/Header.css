@@ -1,14 +1,48 @@
 #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   height: 57vw;
   padding: 0 10%;
-  background-color: linear-gradient(
-    180deg,
-    #131929 49.5%,
-    #1c223b 76.5%,
-    #2a3257 100%
-  );
-  background-color: #131929;
   background-image: url(../../public/images/icons/Group\ 1.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.header-container {
+  transition: all 0.5s ease;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ced8f8;
+  font-size: 2.6vw;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.intro-text {
+  margin-bottom: 3%;
+}
+
+.highlighted-text {
+  color: #d672b4;
+  font-weight: 600;
+  font-size: 3.2vw;
+}
+
+button {
+  /* Add button styles */
+}
+
+.header-image {
+  position: absolute;
+  right: 0;
+  bottom: -25%;
+  height: 47vw;
+  z-index: 1;
+  transition: all 0.5s ease;
 }

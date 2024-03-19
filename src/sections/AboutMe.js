@@ -3,49 +3,18 @@ import "./AboutMe.css";
 
 function AboutMe() {
   return (
-    <div id="about-me" style={{ position: "relative" }}>
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            width: "50%",
-            position: "relative",
-            zIndex: "1",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
+    <div id="about-me">
+      <div className="aboutme-container">
+        <div className="aboutme-image">
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/images/icons/ag2.png`}
-              style={{
-                width: "78%",
-                transform: "rotate(5deg)",
-              }}
+              alt="Agnes"
             />
           </div>
         </div>
-        <div
-          style={{
-            lineHeight: "2",
-            width: "55%",
-            zIndex: "10",
-            color: "#CED8F8",
-            position: "relative",
-            zIndex: "1",
-            fontSize: "1rem",
-          }}
-        >
-          <div
-            style={{
-              fontWeight: "bold",
-              fontSize: "3vw",
-              marginBottom: "5%",
-              position: "relative",
-              zIndex: "1",
-              color: "#D672B4",
-            }}
-          >
+        <div className="aboutme-content">
+          <div id="about-me-title" className="aboutme-title">
             About Me!
           </div>
           <span className="emoji">👋</span> Hello! I'm Agnes, a passionate web
@@ -74,13 +43,8 @@ function AboutMe() {
       </div>
       <img
         src={`${process.env.PUBLIC_URL}/images/icons/tes.png`}
-        style={{
-          position: "absolute",
-          left: "0",
-          top: "-25%",
-          width: "35vw",
-          zIndex: "0",
-        }}
+        className="aboutme-background"
+        alt="Background"
       />
     </div>
   );

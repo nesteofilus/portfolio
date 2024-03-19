@@ -1,4 +1,5 @@
 import React from "react";
+import "./Skills.css";
 
 function Skills() {
   const logos = [
@@ -23,61 +24,23 @@ function Skills() {
     { image: "Paradigm", name: "Paradigm" },
     { image: "Mendix", name: "Mendix" },
   ];
+
   return (
-    <div
-      id="skills"
-      style={{
-        backgroundColor: "#1B2234",
-        // backgroundImage: `url(${process.env.PUBLIC_URL}/images/icons/36.png)`,
-        // backgroundSize: "cover",
-      }}
-    >
-      <div
-        style={{
-          fontWeight: "bold",
-          fontSize: "2.5vw",
-          marginBottom: "5%",
-          backgroundColor: "#131929",
-          // backgroundImage: `url(${process.env.PUBLIC_URL}/images/icons/e.png)`,
-          backgroundSize: "cover",
-          color: "#D672B4",
-          padding: "3% 10% 3%",
-        }}
-      >
-        Technologies I've been working with
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          padding: "0 10% 2%",
-          gap: "3vw",
-        }}
-      >
-        {logos.map((logo) => {
-          return (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "center",
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/icons/58.png)`,
-                backgroundSize: "cover",
-                width: "10rem",
-                height: "10rem",
-              }}
-            >
-              <div>
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/${logo.image}.png`}
-                  style={{ width: "4.5vw", paddingTop: "16%" }}
-                ></img>
-              </div>
-              <div style={{ marginTop: "10px" }}>{logo.name}</div>
+    <div id="skills">
+      <div className="skills-heading">Technologies I've been working with</div>
+      <div className="skills-container">
+        {logos.map((logo) => (
+          <div className="skill-item" key={logo.name}>
+            <div>
+              <img
+                src={`${process.env.PUBLIC_URL}/images/${logo.image}.png`}
+                className="skill-logo"
+                alt={logo.name}
+              />
             </div>
-          );
-        })}
+            <div style={{ marginTop: "10px" }}>{logo.name}</div>
+          </div>
+        ))}
       </div>
     </div>
   );

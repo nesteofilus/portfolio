@@ -11,3 +11,55 @@
   color: #93da9e;
   font-weight: 600;
 }
+
+#about-me {
+  position: relative;
+}
+
+.aboutme-container {
+  display: flex;
+  margin-top: -10%;
+}
+
+.aboutme-image {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.aboutme-image img {
+  width: 78%;
+  transform: rotate(5deg);
+}
+
+.aboutme-content {
+  line-height: 2;
+  width: 55%;
+  z-index: 10;
+  color: #ced8f8;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.aboutme-title {
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 5%;
+  position: relative;
+  z-index: 1;
+  color: #d672b4;
+  padding-top: 10%;
+}
+
+.aboutme-background {
+  position: absolute;
+  left: 0;
+  top: -25%;
+  width: 35vw;
+  z-index: 0;
+}
