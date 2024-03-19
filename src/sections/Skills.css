@@ -1,5 +1,6 @@
 #skills {
   background-color: #1b2234;
+  padding-bottom: 10%;
 }
 
 .skills-heading {
@@ -23,10 +24,11 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: url(../../public/images/icons/76.png);
+  background-image: url(../../public/images/decorations/skills.png);
   background-size: cover;
-  width: 10rem;
-  height: 10rem;
+  width: 11vw;
+  height: 11vw;
+  font-size: 1.1vw;
 }
 
 .skill-logo {

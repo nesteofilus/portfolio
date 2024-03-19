@@ -38,7 +38,7 @@ function Skills() {
                 alt={logo.name}
               />
             </div>
-            <div style={{ marginTop: "10px" }}>{logo.name}</div>
+            <div style={{ marginTop: "1vw" }}>{logo.name}</div>
           </div>
         ))}
       </div>

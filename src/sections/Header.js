@@ -12,11 +12,18 @@ function Header() {
             , <br /> a web developer.
           </div>
           <div>
-            <button>Get to know me better</button>
+            <button
+              onClick={() => {
+                const element = document.getElementById("about-me-title");
+                element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Get to know me better
+            </button>
           </div>
         </div>
         <img
-          src={`${process.env.PUBLIC_URL}/images/icons/21.png`}
+          src={`${process.env.PUBLIC_URL}/images/decorations/astronaut.png`}
           className="header-image"
         />
       </div>

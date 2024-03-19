@@ -5,13 +5,9 @@
   position: relative;
   height: 57vw;
   padding: 0 10%;
-  background-image: url(../../public/images/icons/Group\ 1.png);
+  background-image: url(../../public/images/decorations/header.png);
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.header-container {
-  transition: all 0.5s ease;
 }
 
 .header-content {
@@ -32,10 +28,6 @@
   color: #d672b4;
   font-weight: 600;
   font-size: 3.2vw;
-}
-
-button {
-  /* Add button styles */
 }
 
 .header-image {

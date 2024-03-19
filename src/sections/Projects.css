@@ -2,12 +2,7 @@
   padding: 0 10%;
 }
 
-#tes {
-  background-image: url(../../public/images/icons/k.png);
-  background-size: cover;
-}
-
-.projects-container {
+#projects {
   padding: 5% 10%;
 }
 
@@ -28,26 +23,25 @@
   width: 50%;
 }
 
-.project-details {
-  display: flex;
-  flex-direction: column;
-  padding: 0 40px;
-  box-sizing: border-box;
-  width: 50%;
-  height: 100%;
-  justify-content: center;
-}
-
 .project-name {
   font-weight: bold;
   color: #93da9e;
   font-size: 1.5vw;
   margin-bottom: 10px;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.project-name:hover,
+.project-name:active,
+.project-name::selection {
+  text-decoration: underline;
 }
 
 .project-description {
   line-height: 2;
   color: #ced8f8;
+  font-size: 1.2vw;
 }
 
 .project-stack {

@@ -8,7 +8,7 @@ function AboutMe() {
         <div className="aboutme-image">
           <div>
             <img
-              src={`${process.env.PUBLIC_URL}/images/icons/ag2.png`}
+              src={`${process.env.PUBLIC_URL}/images/decorations/pic.png`}
               alt="Agnes"
             />
           </div>
@@ -42,7 +42,7 @@ function AboutMe() {
         <div></div>
       </div>
       <img
-        src={`${process.env.PUBLIC_URL}/images/icons/tes.png`}
+        src={`${process.env.PUBLIC_URL}/images/decorations/planet.png`}
         className="aboutme-background"
         alt="Background"
       />
