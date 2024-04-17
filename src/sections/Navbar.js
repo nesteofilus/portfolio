@@ -7,24 +7,32 @@ function Navbar() {
     element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const openResume = () => {
+    window.open(
+      "https://drive.google.com/file/d/1PNdksCsTMJNLcuNcG3maYGQoI7eoLe23/view?usp=sharing"
+    );
+  };
+
+  const navbarItems = [
+    { id: "about-me", text: "About Me" },
+    { id: "skills", text: "Skills" },
+    { id: "projects", text: "Projects" },
+    { id: "contact", text: "Contact" },
+    { id: "resume", text: "Resume", action: openResume },
+  ];
+
   return (
     <div className="navbar-container">
       <div className="navbar-items">
-        <div
-          className="navbar-item"
-          onClick={() => scrollFunction("about-me-title")}
-        >
-          About Me
-        </div>
-        <div className="navbar-item" onClick={() => scrollFunction("skills")}>
-          Skills
-        </div>
-        <div className="navbar-item" onClick={() => scrollFunction("projects")}>
-          Projects
-        </div>
-        <div className="navbar-item" onClick={() => scrollFunction("contact")}>
-          Contact
-        </div>
+        {navbarItems.map((item, index) => (
+          <div
+            key={index}
+            className={`navbar-item ${item.id === "resume" ? "resume" : ""}`}
+            onClick={item.action ? item.action : () => scrollFunction(item.id)}
+          >
+            <span>{item.text}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

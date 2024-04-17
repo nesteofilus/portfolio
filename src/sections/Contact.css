@@ -1,7 +1,10 @@
 .contact-container {
-  padding: 7vw 10vw 7vw 0;
-  min-height: 30vw;
+  padding-right: 20%;
+  padding-top: 10%;
+  margin-top: -10%;
+  min-height: 50vw;
   position: relative;
+  overflow: hidden;
 }
 
 .contact-image {
@@ -10,26 +13,60 @@
   bottom: 0;
 }
 
-.contact-details {
+.contact-wrapper {
   float: right;
   color: #93da9e;
-  padding-right: 12%;
   z-index: 100;
   position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 35vw;
 }
 
-.contact-header {
-  font-weight: bold;
+.contact-title {
   font-size: 3vw;
   margin-bottom: 5%;
   color: #d672b4;
+  opacity: 0;
+  font-family: "Caveat Brush";
 }
 
-.contact-info {
+.contact-details {
+  opacity: 0;
   margin: 2vw 0;
   display: flex;
   align-items: center;
   font-size: 1.2vw;
+  filter: blur(5px);
+  transition: all 2.5s;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-info {
+  position: relative;
+
+  font-size: 1.4vw;
+}
+
+.contact-info:after {
+  margin-bottom: -3px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #93da9e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.contact-info:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .contact-icon {
@@ -37,6 +74,80 @@
   margin-right: 15px;
 }
 
-.contact-info:hover {
-  text-decoration: underline;
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.meteor1 {
+  opacity: 0;
+  animation: move 4s infinite;
+}
+
+.meteor2 {
+  opacity: 0;
+  animation: move2 4s infinite 2.5s;
+}
+
+.meteor3 {
+  opacity: 0;
+  animation: move3 4s infinite 1.5s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    right: -20%;
+  }
+  20% {
+    opacity: 1;
+    bottom: 0;
+    right: 25%;
+  }
+  30%,
+  100% {
+    opacity: 0;
+    bottom: 0;
+    right: 25%;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    left: 65%;
+  }
+  30% {
+    opacity: 1;
+    bottom: 0;
+    left: 25%;
+  }
+  35%,
+  100% {
+    opacity: 0;
+    bottom: 0;
+    left: 25%;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    left: 20%;
+  }
+  25% {
+    opacity: 1;
+    bottom: 0;
+    left: -20%;
+  }
+  30%,
+  100% {
+    opacity: 0;
+    bottom: 0;
+    left: -20%;
+  }
 }

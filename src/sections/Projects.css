@@ -1,21 +1,29 @@
 #projects {
-  padding: 0 10%;
-}
-
-#projects {
   padding: 5% 10%;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
-.projects-header {
-  font-weight: bold;
+.projects-title {
   font-size: 3vw;
   margin-bottom: 10%;
   color: #d672b4;
+  font-family: "Caveat Brush";
 }
 
 .project-item {
   display: flex;
   margin-bottom: 20%;
+  opacity: 0;
+  transition: all 1.5s;
+  filter: blur(5px);
+}
+
+.odd {
+  transform: translateX(-20%);
+}
+.even {
+  transform: translateX(20%);
 }
 
 .project-image {
@@ -30,18 +38,37 @@
   margin-bottom: 10px;
   cursor: pointer;
   line-height: 1.5;
+  display: inline-flex;
+  position: relative;
 }
 
-.project-name:hover,
-.project-name:active,
-.project-name::selection {
-  text-decoration: underline;
+#name {
+  position: relative;
+}
+
+#name:after {
+  margin-bottom: -3px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #93da9e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#name:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .project-description {
   line-height: 2;
   color: #ced8f8;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
 }
 
 .project-stack {
@@ -52,9 +79,45 @@
   color: #93da9e;
   border-radius: 5px;
   background-color: transparent;
-  border: 2px solid #93da9e;
+  border: 0.15vw solid #93da9e;
   padding: 0.3vw 1vw;
   margin-right: 1vw;
   margin-top: 0.5vw;
   font-size: 1vw;
+  font-weight: 600;
+}
+
+.project-image {
+  transition: all 0.7s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+  transition: all 0.7s ease;
+}
+
+.projects-title {
+  opacity: 0;
+}
+
+.bounce {
+  opacity: 1;
+  animation: bounce 2s ease;
+  transition: all 2s;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2vw);
+  }
+  60% {
+    transform: translateY(-1vw);
+  }
 }
