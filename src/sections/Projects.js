@@ -42,7 +42,7 @@ function Projects() {
       name: "Mizuee",
       desc: "Mizuee, a distinguished brand operating under PT. Bersama Ong Sejahtera, stands out as a F&B store specializing in Japanese-styled beverages and snacks. I was tasked with the responsibility of designing and developing their website from scratch.",
       stack: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
-      link: "",
+      link: "http://mizuee.web.id",
     },
     {
       image: "3",
