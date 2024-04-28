@@ -52,7 +52,6 @@
 }
 
 .aboutme-title {
-  font-size: 3vw;
   margin-bottom: 3%;
   position: relative;
   z-index: 1;
@@ -99,5 +98,14 @@
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about-me {
+    padding: 5% 5% 10%;
+  }
+  .aboutme-content {
+    font-size: 1.7vw;
   }
 }

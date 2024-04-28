@@ -6,7 +6,7 @@
   height: 57vw;
   padding: 0 10%;
   margin-bottom: 10%;
-  background-image: url(../../public/images/decorations/header.png);
+  background-image: url(../../public/images/decorations/header.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Caveat Brush";
@@ -59,15 +59,15 @@
   filter: blur(5px);
   transform: translateY(-100%);
   transition: all 1.5s;
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
 
-.button-hidden {
+.button-wrapper {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(100%);
-  transition: all 2s;
-  transition-delay: 0.5s;
+  transition: all 1.5s;
+  transition-delay: 1s;
 }
 
 .show {
@@ -103,7 +103,7 @@
   opacity: 1;
   animation-name: bounce-header;
   animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
 }
 
 @keyframes bounce-header {
@@ -119,5 +119,11 @@
   }
   60% {
     transform: translateY(-1vw);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .highlighted-text {
+    font-size: 4.8vw;
   }
 }

@@ -7,8 +7,6 @@ function Skills() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
         }
       });
     };
@@ -48,10 +46,12 @@ function Skills() {
     { image: "Next", name: "NextJS" },
     { image: "Html", name: "HTML" },
     { image: "Css", name: "CSS" },
+    { image: "Sass", name: "Sass" },
     { image: "Mysql", name: "MySQL" },
-    { image: "Ejs", name: "EJS" },
-    { image: "Java", name: "Java" },
     { image: "Jquery", name: "jQuery" },
+    { image: "Java", name: "Java" },
+    { image: "Springboot", name: "Spring Boot" },
+    { image: "Ejs", name: "EJS" },
     { image: "Postman", name: "Postman" },
     { image: "Git", name: "Git" },
     { image: "Code", name: "Code" },
@@ -83,7 +83,7 @@ function Skills() {
               {setAnimationOrder(i, logo.name)}
               <div>
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/${logo.image}.png`}
+                  src={`${process.env.PUBLIC_URL}/images/${logo.image}.webp`}
                   className="skill-logo"
                   alt={logo.name}
                 />

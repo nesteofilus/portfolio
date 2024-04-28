@@ -1,5 +1,4 @@
 .contact-container {
-  padding-right: 20%;
   padding-top: 10%;
   margin-top: -10%;
   min-height: 50vw;
@@ -14,6 +13,7 @@
 }
 
 .contact-wrapper {
+  padding-right: 20%;
   float: right;
   color: #93da9e;
   z-index: 100;
@@ -25,7 +25,6 @@
 }
 
 .contact-title {
-  font-size: 3vw;
   margin-bottom: 5%;
   color: #d672b4;
   opacity: 0;
@@ -34,10 +33,10 @@
 
 .contact-details {
   opacity: 0;
-  margin: 2vw 0;
+  margin: 1vw 0;
   display: flex;
   align-items: center;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   filter: blur(5px);
   transition: all 2.5s;
   cursor: pointer;
@@ -46,8 +45,6 @@
 
 .contact-info {
   position: relative;
-
-  font-size: 1.4vw;
 }
 
 .contact-info:after {
@@ -93,6 +90,11 @@
 .meteor3 {
   opacity: 0;
   animation: move3 4s infinite 1.5s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 @keyframes move {
@@ -149,5 +151,14 @@
     opacity: 0;
     bottom: 0;
     left: -20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-details {
+    font-size: 2vw;
+  }
+  .contact-wrapper {
+    padding-right: 12vw;
   }
 }

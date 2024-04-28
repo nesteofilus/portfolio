@@ -7,8 +7,6 @@ function Header() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
         }
       });
     };
@@ -25,7 +23,7 @@ function Header() {
     };
 
     const hiddenElements = document.querySelectorAll(
-      ".intro-text-hidden, .button-hidden"
+      ".intro-text-hidden, .button-wrapper"
     );
     const hiddenElements2 = document.querySelectorAll(".highlighted-text");
 
@@ -52,21 +50,21 @@ function Header() {
           <div className="intro-text intro-text-hidden">
             I'm&nbsp;
             <div className="highlighted-text">Agnes Agatha Chang</div>, <br /> a
-            web developer.
+            software engineer.
           </div>
-          <div>
+          <div className="button-wrapper">
             <button onClick={scrollToAboutMe} className="button-hidden">
               Get to know me better
             </button>
           </div>
         </div>
         <img
-          src={`${process.env.PUBLIC_URL}/images/decorations/astronaut.png`}
+          src={`${process.env.PUBLIC_URL}/images/decorations/astronaut.webp`}
           className="header-image"
           alt="Astronaut"
         />
         <img
-          src={`${process.env.PUBLIC_URL}/images/decorations/planet.png`}
+          src={`${process.env.PUBLIC_URL}/images/decorations/planet.webp`}
           className="header-background planet"
           alt="Background"
         />

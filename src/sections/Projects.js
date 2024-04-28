@@ -9,8 +9,6 @@ function Projects() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
         }
       });
     };
@@ -56,14 +54,14 @@ function Projects() {
       name: "Castale",
       desc: "Castale, short for 'Castle of Tales,' is a full-stack website that I developed with a focus on providing a rich repository of stories, specifically curated for children. It serves as a digital haven where young readers can immerse themselves in a diverse collection of captivating tales.",
       stack: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
-      link: "http://bit.ly/castale",
+      link: "https://drive.google.com/file/d/1gB3Y4FZjHXY4yamDJbO3fRle2w2i_OsV/view",
     },
     {
       image: "5",
       name: "Simon Game",
       desc: "In an endeavor to sharpen my cognitive skills, I embarked on a project to develop a captivating memory-enhancement game. This simple game requires the player to memorize an ever-increasing sequence of colors and sounds. The higher the level, the more difficult it gets. This game is called 'Simon Game' which was invented in 1978. ",
       stack: ["HTML", "CSS", "Javascript"],
-      link: "https://nesteofilus.github.io/simongame/",
+      link: "https://agnesagathachang.github.io/simongame/",
     },
   ];
 
@@ -80,14 +78,14 @@ function Projects() {
           <div className={`project-item ${index % 2 === 0 ? "odd" : "even"}`}>
             <div>
               <img
-                className="project-image"
-                src={`${process.env.PUBLIC_URL}/images/${project.image}.png`}
+                className={`project-image ${
+                  index % 2 === 0 ? "odd-image" : "even-image"
+                }`}
+                src={`${process.env.PUBLIC_URL}/images/${project.image}.webp`}
                 alt="Project"
                 style={{
-                  height: "30vw",
                   display: "flex",
                   float: index % 2 === 0 ? "left" : "right",
-                  width: "50%",
                   cursor: "pointer",
                 }}
                 onClick={() => visitLink(project.link)}
@@ -96,13 +94,11 @@ function Projects() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  float: index % 2 === 0 ? "left" : "right",
-                  padding: "0 40px",
                   boxSizing: "border-box",
-                  width: "50%",
                   height: "100%",
                   justifyContent: "center",
                 }}
+                className="project-description-wrapper"
               >
                 <div style={{ display: "inline-flex", position: "relative" }}>
                   <div
@@ -119,9 +115,9 @@ function Projects() {
                       icon={faArrowUpRightFromSquare}
                       style={{
                         color: "#93da9e",
-                        fontSize: "1.5vw",
                         marginLeft: "0.8vw",
                       }}
+                      id="visit-icon"
                     />
                   </div>
                 </div>

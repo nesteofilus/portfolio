@@ -5,7 +5,6 @@
 }
 
 .projects-title {
-  font-size: 3vw;
   margin-bottom: 10%;
   color: #d672b4;
   font-family: "Caveat Brush";
@@ -26,11 +25,6 @@
   transform: translateX(20%);
 }
 
-.project-image {
-  height: 30vw;
-  width: 50%;
-}
-
 .project-name {
   font-weight: bold;
   color: #93da9e;
@@ -40,6 +34,18 @@
   line-height: 1.5;
   display: inline-flex;
   position: relative;
+}
+
+.odd-image {
+  margin-right: 40px;
+}
+
+.even-image {
+  margin-left: 40px;
+}
+
+#visit-icon {
+  font-size: 1.5vw;
 }
 
 #name {
@@ -89,6 +95,8 @@
 
 .project-image {
   transition: all 0.7s ease;
+  height: 30vw;
+  width: 40vw;
 }
 
 .project-image:hover {
@@ -119,5 +127,38 @@
   }
   60% {
     transform: translateY(-1vw);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    padding: 5%;
+  }
+  .project-description-wrapper {
+    padding: 0 10px;
+    width: auto;
+  }
+  .project-name {
+    font-size: 2vw;
+  }
+  .project-description {
+    font-size: 1.7vw;
+  }
+  .stack-item {
+    font-size: 1.2vw;
+  }
+  .odd-image {
+    margin-right: 10px;
+  }
+  .even-image {
+    margin-left: 0px;
+  }
+  .project-image {
+    height: 32vw;
+    width: 42vw;
+  }
+  #visit-icon {
+    font-size: 1.8vw;
+    margin-left: 2px;
   }
 }

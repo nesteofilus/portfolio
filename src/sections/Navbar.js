@@ -9,7 +9,7 @@ function Navbar() {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1PNdksCsTMJNLcuNcG3maYGQoI7eoLe23/view?usp=sharing"
+      "https://drive.google.com/file/d/1yQOQU0OYxhsyGEhzUhpahTwLkOqeX_U6/view?usp=share_link"
     );
   };
 

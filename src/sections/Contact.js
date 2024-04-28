@@ -7,8 +7,6 @@ function Contact() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
         }
       });
     };
@@ -52,7 +50,7 @@ function Contact() {
         {[9, 8, 7].map((size, index) => (
           <img
             key={index}
-            src={`${process.env.PUBLIC_URL}/images/decorations/34.png`}
+            src={`${process.env.PUBLIC_URL}/images/decorations/meteor.webp`}
             alt="meteor"
             style={{ position: "absolute", height: `${size}vw` }}
             className={`meteor${index + 1}`}
@@ -61,7 +59,7 @@ function Contact() {
       </div>
       <div>
         <img
-          src={`${process.env.PUBLIC_URL}/images/decorations/footer.png`}
+          src={`${process.env.PUBLIC_URL}/images/decorations/footer.webp`}
           alt="contact"
           className="contact-image"
         />
@@ -70,7 +68,7 @@ function Contact() {
         <div className="contact-title title">Get in Touch</div>
         <div className="contact-details" onClick={sendEmail}>
           <img
-            src={`${process.env.PUBLIC_URL}/images/decorations/email.png`}
+            src={`${process.env.PUBLIC_URL}/images/decorations/email.webp`}
             alt="email"
             className="contact-icon"
           />
@@ -78,12 +76,23 @@ function Contact() {
         </div>
         <div className="contact-details" onClick={sendMessage}>
           <img
-            src={`${process.env.PUBLIC_URL}/images/decorations/phone.png`}
+            src={`${process.env.PUBLIC_URL}/images/decorations/phone.webp`}
             alt="phone"
             className="contact-icon"
           />
           <span className="contact-info">081282209870</span>
         </div>
+
+        <a href="https://www.linkedin.com/in/agnes-agatha-chang-174905251/">
+          <div className="contact-details">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/decorations/linkedin.webp`}
+              alt="phone"
+              className="contact-icon"
+            />
+            <span className="contact-info">Agnes Agatha Chang</span>
+          </div>
+        </a>
       </div>
     </div>
   );

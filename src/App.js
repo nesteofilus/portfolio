@@ -11,34 +11,59 @@ function App() {
   useEffect(() => {
     const container = document.getElementById("container");
     const app = document.getElementById("App");
+    const hello = document.getElementById("hello");
     if (container && app) {
-      container.style.opacity = "1";
-      app.style.display = "none";
       setTimeout(function () {
-        container.style.opacity = "0";
+        hello.style.opacity = "1";
+      }, 200);
+      setTimeout(function () {
         app.style.display = "block";
-      }, 3600);
+        container.style.opacity = "0";
+        container.style.zIndex = "10";
+      }, 2200);
+      setTimeout(function () {
+        container.style.zIndex = "-1";
+      }, 2250);
     }
   }, []);
 
   return (
     <div>
-      <div id="container">
-        <div class="box">
-          <div class="loading-title">
-            <span class="block"></span>
-            <h1>
-              System
-              <span style={{ color: "white" }}>
-                .<span style={{ color: "#e06c75" }}>out</span>.
-              </span>
-              <span style={{ color: "#61afef" }}>println</span>
-              <span style={{ color: "#fa8231" }}>(" Hello World! ");</span>
-              <span id="dot" />
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        id="container"
+      >
+        <div className="container">
+          <div className="moon">
+            <h1 id="hello">
+              <span>H</span>
+              <span>e</span>
+              <span>l</span>
+              <span>l</span>
+              <span>o</span>
+              <span style={{ color: "#d672b4" }}>!</span>
             </h1>
+            <div className="star-1"></div>
+            <div className="star-2"></div>
           </div>
         </div>
+        <div id="star">
+          <span className="star"></span>
+          <span className="star"></span>
+          <span className="star"></span>
+          <span className="star"></span>
+          <span className="star"></span>
+          <span className="star"></span>
+          <span className="star"></span>
+          <span className="star"></span>
+        </div>
       </div>
+
       <div id="App">
         <Navbar />
         <Header />

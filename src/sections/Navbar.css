@@ -42,3 +42,9 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar-items {
+    font-size: 1.7vw;
+  }
+}

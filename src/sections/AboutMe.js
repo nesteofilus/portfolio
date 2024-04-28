@@ -7,8 +7,6 @@ function AboutMe() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(classToAdd);
-        } else {
-          entry.target.classList.remove(classToRemove);
         }
       });
     };
@@ -36,7 +34,7 @@ function AboutMe() {
         <div className="aboutme-image">
           <div>
             <img
-              src={`${process.env.PUBLIC_URL}/images/decorations/pic.png`}
+              src={`${process.env.PUBLIC_URL}/images/decorations/pic.webp`}
               alt="Agnes"
             />
           </div>
@@ -46,12 +44,11 @@ function AboutMe() {
             About Me!
           </div>
           <span className="emoji">👋</span>&nbsp; Hello! I'm Agnes, a passionate{" "}
-          <span className="highlight">web developer </span>
-          with a knack for crafting seamless and user-friendly digital
-          experiences. Committed to continuous learning and collaboration, I
-          thrive on driving innovation within teams. I'm dedicated to staying
-          ahead of the curve by constantly adapting to and mastering new
-          technologies.
+          software engineer specializing in
+          <span className="highlight"> web development</span>. Committed to
+          continuous learning and collaboration, I thrive on driving innovation
+          within teams. I'm dedicated to staying ahead of the curve by
+          constantly adapting to and mastering new technologies.
           <br />
           <br /> 💻&nbsp; With a robust skill set encompassing{" "}
           <span className="highlight">HTML</span>,
