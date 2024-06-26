@@ -13,22 +13,26 @@
 }
 
 .contact-wrapper {
+  @include flexCenter();
   padding-right: 20%;
   float: right;
-  color: #93da9e;
+  color: $green;
   z-index: 100;
   position: relative;
-  justify-content: center;
-  display: flex;
   flex-direction: column;
   height: 35vw;
 }
 
 .contact-title {
   margin-bottom: 5%;
-  color: #d672b4;
+  color: $pink;
   opacity: 0;
   font-family: "Caveat Brush";
+  &.bounce {
+    opacity: 1;
+    animation: bounce 2s ease;
+    transition: all 2s;
+  }
 }
 
 .contact-details {
@@ -41,34 +45,34 @@
   transition: all 2.5s;
   cursor: pointer;
   position: relative;
-}
 
-.contact-info {
-  position: relative;
-}
+  .contact-info {
+    position: relative;
 
-.contact-info:after {
-  margin-bottom: -3px;
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: #93da9e;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
+    &:after {
+      margin-bottom: -3px;
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: $green;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
 
-.contact-info:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
 
-.contact-icon {
-  width: 2vw;
-  margin-right: 15px;
+  .contact-icon {
+    width: 2vw;
+    margin-right: 15px;
+  }
 }
 
 .show {

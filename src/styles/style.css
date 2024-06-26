@@ -1,0 +1,679 @@
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 57vw;
+  padding: 0 10%;
+  margin-bottom: 10%;
+  background-image: url(../../public/images/decorations/header.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Caveat Brush";
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ced8f8;
+  font-size: 3.4vw;
+  font-weight: 400;
+  margin-bottom: 4%;
+}
+.header-content .intro-text {
+  margin-bottom: 3%;
+  line-height: 1.7;
+}
+.header-content .highlighted-text {
+  color: #d672b4;
+  font-size: 4.6vw;
+  display: inline-block;
+}
+
+.header-image {
+  position: absolute;
+  right: 0;
+  bottom: -25%;
+  height: 47vw;
+  z-index: 1;
+  transition: all 0.5s ease;
+  animation: mover 2s infinite alternate;
+}
+
+.header-background {
+  position: absolute;
+  left: -20%;
+  right: 0;
+  top: 71%;
+  width: 55vw;
+  animation: spin 150s linear infinite;
+  z-index: 1;
+}
+
+.intro-text-hidden,
+.button-wrapper {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1.5s;
+  transition-delay: 1s;
+}
+
+.button-wrapper {
+  transform: translateY(100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.bounce-header {
+  opacity: 1;
+  animation-name: bounce-header;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3.2vw);
+  }
+}
+@keyframes bounce-header {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-1.2vw);
+  }
+  60% {
+    transform: translateY(-1vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .highlighted-text {
+    font-size: 4.8vw;
+  }
+}
+#about-me {
+  background-color: #283155;
+  padding: 5% 10% 10%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.emoji {
+  font-size: 1.5vw;
+}
+
+.highlight {
+  color: #93da9e;
+  font-weight: 600;
+}
+
+.aboutme-container {
+  display: flex;
+  margin-top: -10%;
+}
+
+.aboutme-image {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2.5s;
+}
+.aboutme-image img {
+  width: 78%;
+  transform: rotate(5deg);
+}
+
+.aboutme-content {
+  line-height: 2;
+  width: 55%;
+  z-index: 10;
+  color: #ced8f8;
+  position: relative;
+  font-size: 1.25vw;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 2.5s;
+}
+
+.aboutme-title {
+  margin-bottom: 3%;
+  position: relative;
+  z-index: 1;
+  color: #d672b4;
+  padding-top: 10%;
+  opacity: 0;
+  font-family: "Caveat Brush";
+}
+
+.bounce-aboutme {
+  opacity: 1;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2vw);
+  }
+  60% {
+    transform: translateY(-1vw);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  #about-me {
+    padding: 5% 5% 10%;
+  }
+  .aboutme-content {
+    font-size: 1.7vw;
+  }
+}
+#skills {
+  background-color: #1b2234;
+  padding-bottom: 5%;
+}
+
+.skills-heading {
+  font-size: 2.5vw;
+  margin-bottom: 5%;
+  background-color: #161c2d;
+  color: #d672b4;
+  padding: 3% 10% 3%;
+}
+@media screen and (max-width: 768px) {
+  .skills-heading {
+    padding: 3% 5% 3%;
+  }
+}
+
+.skills-title {
+  opacity: 0;
+  display: flex;
+  font-family: "Caveat Brush";
+}
+.skills-title.bounce {
+  opacity: 1;
+  animation: bounce 2s ease;
+  transition: all 2s;
+  animation-delay: 2s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-0.8vw);
+  }
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 68%;
+  gap: 3vw;
+}
+@media screen and (max-width: 768px) {
+  .skills-container {
+    width: 88%;
+    gap: 3.2vw;
+    font-size: 5vw;
+  }
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(../../public/images/decorations/skills.webp);
+  background-size: cover;
+  width: 11vw;
+  height: 11vw;
+  font-size: 1.1vw;
+  color: #1b2234;
+}
+@media screen and (max-width: 768px) {
+  .item {
+    width: 15vw;
+    height: 15vw;
+    font-size: 1.7vw;
+  }
+}
+
+.skill-logo {
+  width: 4.5vw;
+  padding-top: 16%;
+}
+@media screen and (max-width: 768px) {
+  .skill-logo {
+    width: 6vw;
+    padding-top: 16%;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.pop {
+  opacity: 1;
+  animation-name: animateIn;
+  animation-duration: 500ms;
+  animation-delay: calc(var(--animation-order) * 70ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contact-container {
+  padding-top: 10%;
+  margin-top: -10%;
+  min-height: 50vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-image {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.contact-wrapper {
+  padding-right: 20%;
+  float: right;
+  color: #93da9e;
+  z-index: 100;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 35vw;
+}
+
+.contact-title {
+  margin-bottom: 5%;
+  color: #d672b4;
+  opacity: 0;
+  font-family: "Caveat Brush";
+}
+.contact-title.bounce {
+  opacity: 1;
+  animation: bounce 2s ease;
+  transition: all 2s;
+}
+
+.contact-details {
+  opacity: 0;
+  margin: 1vw 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.4vw;
+  filter: blur(5px);
+  transition: all 2.5s;
+  cursor: pointer;
+  position: relative;
+}
+.contact-details .contact-info {
+  position: relative;
+}
+.contact-details .contact-info:after {
+  margin-bottom: -3px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #93da9e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.contact-details .contact-info:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.contact-details .contact-icon {
+  width: 2vw;
+  margin-right: 15px;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.meteor1 {
+  opacity: 0;
+  animation: move 4s infinite;
+}
+
+.meteor2 {
+  opacity: 0;
+  animation: move2 4s infinite 2.5s;
+}
+
+.meteor3 {
+  opacity: 0;
+  animation: move3 4s infinite 1.5s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    right: -20%;
+  }
+  20% {
+    opacity: 1;
+    bottom: 0;
+    right: 25%;
+  }
+  30%, 100% {
+    opacity: 0;
+    bottom: 0;
+    right: 25%;
+  }
+}
+@keyframes move2 {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    left: 65%;
+  }
+  30% {
+    opacity: 1;
+    bottom: 0;
+    left: 25%;
+  }
+  35%, 100% {
+    opacity: 0;
+    bottom: 0;
+    left: 25%;
+  }
+}
+@keyframes move3 {
+  0% {
+    opacity: 0;
+    bottom: 100%;
+    left: 20%;
+  }
+  25% {
+    opacity: 1;
+    bottom: 0;
+    left: -20%;
+  }
+  30%, 100% {
+    opacity: 0;
+    bottom: 0;
+    left: -20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-details {
+    font-size: 2vw;
+  }
+  .contact-wrapper {
+    padding-right: 12vw;
+  }
+}
+.navbar-container {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  padding: 1.5vw;
+  box-sizing: border-box;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  color: #93da9e;
+  font-weight: 500;
+  font-size: 1.2vw;
+}
+@media screen and (max-width: 768px) {
+  .navbar-items {
+    font-size: 1.7vw;
+  }
+}
+
+.navbar-item {
+  margin-right: 1vw;
+  background-size: cover;
+  margin: 0 1.2vw;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.navbar-item:after {
+  margin-bottom: -3px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #161c2d, #d672b4);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.navbar-item:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#projects {
+  padding: 5% 10%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+@media screen and (max-width: 768px) {
+  #projects {
+    padding: 5%;
+  }
+}
+
+.projects-title {
+  margin-bottom: 10%;
+  color: #d672b4;
+  font-family: "Caveat Brush";
+  opacity: 0;
+}
+.projects-title.bounce {
+  opacity: 1;
+  animation: bounce 2s ease;
+  transition: all 2s;
+}
+
+.project-item {
+  display: flex;
+  margin-bottom: 20%;
+  opacity: 0;
+  transition: all 1.5s;
+  filter: blur(5px);
+}
+.project-item.odd {
+  transform: translateX(-20%);
+}
+.project-item.even {
+  transform: translateX(20%);
+}
+.project-item.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.project-name {
+  font-weight: bold;
+  color: #93da9e;
+  font-size: 1.5vw;
+  margin-bottom: 10px;
+  cursor: pointer;
+  line-height: 1.5;
+  display: inline-flex;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .project-name {
+    font-size: 2vw;
+  }
+}
+
+.project-description {
+  line-height: 2;
+  color: #ced8f8;
+  font-size: 1.3vw;
+}
+@media screen and (max-width: 768px) {
+  .project-description {
+    font-size: 1.7vw;
+  }
+}
+
+.project-stack {
+  display: flex;
+}
+
+.stack-item {
+  color: #93da9e;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 0.15vw solid #93da9e;
+  padding: 0.3vw 1vw;
+  margin-right: 1vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .stack-item {
+    font-size: 1.2vw;
+  }
+}
+
+.project-image {
+  transition: all 0.7s ease;
+  height: 30vw;
+  width: 40vw;
+}
+.project-image:hover {
+  transform: scale(1.02);
+  transition: all 0.7s ease;
+}
+@media screen and (max-width: 768px) {
+  .project-image {
+    height: 32vw;
+    width: 42vw;
+  }
+}
+
+.odd-image {
+  margin-right: 40px;
+}
+@media screen and (max-width: 768px) {
+  .odd-image {
+    margin-right: 10px;
+  }
+}
+
+.even-image {
+  margin-left: 40px;
+}
+@media screen and (max-width: 768px) {
+  .even-image {
+    margin-left: 0px;
+  }
+}
+
+#visit-icon {
+  font-size: 1.5vw;
+}
+@media screen and (max-width: 768px) {
+  #visit-icon {
+    font-size: 1.8vw;
+    margin-left: 2px;
+  }
+}
+
+#name {
+  position: relative;
+}
+#name:after {
+  margin-bottom: -3px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #93da9e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#name:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2vw);
+  }
+  60% {
+    transform: translateY(-1vw);
+  }
+}/*# sourceMappingURL=style.css.map */

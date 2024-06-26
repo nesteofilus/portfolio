@@ -1,5 +1,4 @@
 import React from "react";
-import "./Navbar.css";
 
 function Navbar() {
   const scrollFunction = (id) => {
@@ -9,7 +8,7 @@ function Navbar() {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1yQOQU0OYxhsyGEhzUhpahTwLkOqeX_U6/view?usp=share_link"
+      "https://drive.google.com/file/d/1XxHIS6B90CnWOgGeCw6rXF-y9cGwEknM/view?usp=sharing"
     );
   };
 

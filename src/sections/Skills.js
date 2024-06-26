@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./Skills.css";
 
 function Skills() {
   useEffect(() => {
@@ -41,9 +40,10 @@ function Skills() {
     { image: "React", name: "ReactJS" },
     { image: "Node", name: "NodeJS" },
     { image: "Express", name: "ExpressJS" },
-    { image: "Mongo", name: "MongoDB" },
     { image: "Postgre", name: "PostgreSQL" },
     { image: "Next", name: "NextJS" },
+    { image: "Typescript", name: "Typescript" },
+    { image: "Mongo", name: "MongoDB" },
     { image: "Html", name: "HTML" },
     { image: "Css", name: "CSS" },
     { image: "Sass", name: "Sass" },

@@ -1,0 +1,11 @@
+$pink: #d672b4;
+$green: #93da9e;
+$fontColor : #ced8f8;
+
+@import './header', './aboutme', './skills', './contact', './navbar', './projects';
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+

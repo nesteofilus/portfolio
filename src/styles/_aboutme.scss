@@ -10,7 +10,7 @@
 }
 
 .highlight {
-  color: #93da9e;
+  color: $green;
   font-weight: 600;
 }
 
@@ -20,21 +20,20 @@
 }
 
 .aboutme-image {
+  @include flexCenter();
   width: 50%;
   position: relative;
   z-index: 1;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-top: 10%;
   filter: blur(5px);
   transform: translateX(-100%);
   transition: all 2.5s;
-}
 
-.aboutme-image img {
-  width: 78%;
-  transform: rotate(5deg);
+  img {
+    width: 78%;
+    transform: rotate(5deg);
+  }
 }
 
 .aboutme-content {
@@ -43,7 +42,6 @@
   z-index: 10;
   color: #ced8f8;
   position: relative;
-  z-index: 1;
   font-size: 1.25vw;
   opacity: 0;
   filter: blur(5px);
@@ -55,7 +53,7 @@
   margin-bottom: 3%;
   position: relative;
   z-index: 1;
-  color: #d672b4;
+  color: $pink;
   padding-top: 10%;
   opacity: 0;
   font-family: "Caveat Brush";
@@ -69,11 +67,7 @@
 }
 
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
@@ -89,11 +83,13 @@
     -moz-transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -105,6 +101,7 @@
   #about-me {
     padding: 5% 5% 10%;
   }
+
   .aboutme-content {
     font-size: 1.7vw;
   }

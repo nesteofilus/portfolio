@@ -6,6 +6,7 @@ import Header from "./sections/Header";
 import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
+import "./styles/style.css";
 
 function App() {
   useEffect(() => {

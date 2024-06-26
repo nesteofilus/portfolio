@@ -7,35 +7,32 @@
   font-size: 2.5vw;
   margin-bottom: 5%;
   background-color: #161c2d;
-  color: #d672b4;
+  color: $pink;
   padding: 3% 10% 3%;
+
+  @media screen and (max-width: 768px) {
+    padding: 3% 5% 3%;
+  }
 }
 
 .skills-title {
   opacity: 0;
   display: flex;
   font-family: "Caveat Brush";
-}
 
-.bounce {
-  opacity: 1;
-  animation: bounce 2s ease;
-  transition: all 2s;
-  animation-delay: 2s;
+  &.bounce {
+    opacity: 1;
+    animation: bounce 2s ease;
+    transition: all 2s;
+    animation-delay: 2s;
+  }
 }
 
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
-  40% {
-    transform: translateY(-0.8vw);
-  }
-  60% {
+  40%, 60% {
     transform: translateY(-0.8vw);
   }
 }
@@ -45,11 +42,16 @@
   flex-wrap: wrap;
   width: 68%;
   gap: 3vw;
+
+  @media screen and (max-width: 768px) {
+    width: 88%;
+    gap: 3.2vw;
+    font-size: 5vw;
+  }
 }
 
 .skills-wrapper {
-  display: flex;
-  justify-content: center;
+  @include flexCenter();
 }
 
 .item {
@@ -63,11 +65,22 @@
   height: 11vw;
   font-size: 1.1vw;
   color: #1b2234;
+
+  @media screen and (max-width: 768px) {
+    width: 15vw;
+    height: 15vw;
+    font-size: 1.7vw;
+  }
 }
 
 .skill-logo {
   width: 4.5vw;
   padding-top: 16%;
+
+  @media screen and (max-width: 768px) {
+    width: 6vw;
+    padding-top: 16%;
+  }
 }
 
 .show {
@@ -92,25 +105,5 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .skills-container {
-    width: 88%;
-    gap: 3.2vw;
-    font-size: 5vw;
-  }
-  .item {
-    width: 15vw;
-    height: 15vw;
-    font-size: 1.7vw;
-  }
-  .skill-logo {
-    width: 6vw;
-    padding-top: 16%;
-  }
-  .skills-heading {
-    padding: 3% 5% 3%;
   }
 }

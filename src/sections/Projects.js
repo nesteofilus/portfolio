@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./Projects.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
@@ -114,7 +113,7 @@ function Projects() {
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
                       style={{
-                        color: "#93da9e",
+                        color: "$green",
                         marginLeft: "0.8vw",
                       }}
                       id="visit-icon"
